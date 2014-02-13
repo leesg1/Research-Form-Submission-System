@@ -5,6 +5,12 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+
+    url(r'^$', 'users.views.dashboard', name='dashboard'),
+	url(r'^login/', 'users.views.login', name='login'),
+    url(r'^logout/', 'users.views.logout', name='logout'),
+    url(r'^create_user/', 'users.views.create_user', name='create_user'),
+    
     # Examples:
     # url(r'^$', 'ReviewSubmission.views.home', name='home'),
     # url(r'^ReviewSubmission/', include('ReviewSubmission.foo.urls')),
