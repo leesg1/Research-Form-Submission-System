@@ -23,7 +23,7 @@ def create_user(request):
 	if all((x in request.POST for x in ['email', 'password'])):
 
 		if User.objects.filter(email=request.POST['email']).count() > 0:
-			print "User Already Exists"
+			print 'User Already Exists'
 			template = get_template('login.html')
 			return HttpResponse(template.render(context))
 
